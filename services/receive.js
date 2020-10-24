@@ -1,7 +1,6 @@
 const GraphApi = require("./graph-api")
 const scripts = require("../scripts/en_US.json")
 const Response = require("./response")
-const { response } = require("express")
 
 class Receive {
     constructor(user, webhookEvent) {

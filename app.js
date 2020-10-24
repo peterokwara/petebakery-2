@@ -62,20 +62,25 @@ app.post('/webhook', (req, res) => {
             let senderPsid = webhookEvent.sender.id;
 
             if (!(senderPsid in users)) {
-                let user = new User(senderPsid)
+                let user = new User(senderPsid);
 
                 GraphAPi.getUserProfile(senderPsid)
                     .then(userProfile => {
-                        user.setProfile(userProfile)
+                        user.setProfile(userProfile);
                     })
                     .catch(error => {
-                        console.log("Profile is unavailable:", error)
+                        // The profile is unavailable
+                        console.log("Profile is unavailable:", error);
                     })
                     .finally(() => {
-                        users[senderPsid] = user
-                    })
-                let receiveMessage = new Receive(users[senderPsid], webhookEvent)
-                return receiveMessage.handleMessage()
+                        users[senderPsid] = user;
+                        console.log(
+                            "New Profile PSID:",
+                            senderPsid
+                        );
+                        let receiveMessage = new Receive(users[senderPsid], webhookEvent);
+                        return receiveMessage.handleMessage();
+                    });
             }
 
             let receiveMessage = new Receive(users[senderPsid], webhookEvent);
