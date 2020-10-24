@@ -37,8 +37,6 @@ class Receive {
         } else {
             this.sendMessage(responses);
         }
-
-        this.sendMessage(responses)
     }
 
     handlePayload() {
@@ -100,7 +98,7 @@ class Receive {
             };
         }
 
-        setTimeout(() => GraphApi.callSendAPI(requestBody), delay);
+        setTimeout(() => GraphAPi.callSendAPI(requestBody), delay);
     }
 }
 
