@@ -1,3 +1,5 @@
+const scripts = require("../scripts/en_US.json")
+
 class Response {
     static genQuickReply(text, quickReplies) {
         let response = {

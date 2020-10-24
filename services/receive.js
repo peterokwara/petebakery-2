@@ -112,7 +112,7 @@ class Receive {
             };
         }
 
-        setTimeout(() => GraphAPi.callSendAPI(requestBody), delay);
+        setTimeout(() => GraphApi.callSendAPI(requestBody), delay);
     }
 }
 
