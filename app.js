@@ -7,6 +7,7 @@ const User = require("./services/user")
 const GraphAPi = require("./services/graph-api")
 
 const app = express()
+let users = {}
 
 app.use(bodyParser.json({ verify: verifyRequestSignature }));
 
