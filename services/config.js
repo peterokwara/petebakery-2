@@ -9,4 +9,14 @@ module.exports = {
   delay: process.env.DELAY,
   maxDepth: process.env.MAXDEPTH,
   timeSource: process.env.TIMESOURCE,
+
+  // Page and Application information
+  verifyToken: process.env.VERIFY_TOKEN,
+  pageAccesToken: process.env.PAGE_ACCESS_TOKEN,
+
+  // Page and Application information
+  appSecret: process.env.APP_SECRET,
+
+  // Preferred port (default to 3000)
+  port: process.env.PORT || 3000
 };
