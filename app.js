@@ -2,6 +2,7 @@ const express = require("express")
 const crypto = require("crypto")
 const bodyParser = require("body-parser")
 const config = require("./services/config")
+const Receive = require("./services/receive")
 
 const app = express()
 
@@ -39,10 +40,26 @@ app.post('/webhook', (req, res) => {
         // Iterates over each entry - there may be multiple if batched
         body.entry.forEach(function (entry) {
 
+            // Handle Page Changes event
+            let receiveMessage = new Receive();
+
             // Gets the message. entry.messaging is an array, but 
             // will only ever contain one message, so we get index 0
             let webhook_event = entry.messaging[0];
             console.log(webhook_event);
+
+            // Get the sender PSID
+            let sender_psid = webhook_event.sender.id;
+            console.log('Sender PSID: ' + sender_psid);
+
+            // Check if the event is a message or postback and
+            // pass the event to the appropriate handler function
+            if (webhook_event.message) {
+                receiveMessage.handleMessage(sender_psid, webhook_event.message)
+            } else if (webhook_event.postback) {
+                receiveMessage.handlePostback(sender_psid, webhook_event.message)
+            }
+
         });
 
         // Returns a '200 OK' response to all requests
