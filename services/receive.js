@@ -50,7 +50,7 @@ class Receive {
             `${this.webhookEvent.message.text} for ${this.user.psid}`
         );
 
-        return response = Response.genNuxMessage(this.user);
+        return Response.genNuxMessage(this.user);
     }
 
     handlePayload() {
