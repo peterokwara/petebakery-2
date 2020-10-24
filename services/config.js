@@ -18,5 +18,13 @@ module.exports = {
   appSecret: process.env.APP_SECRET,
 
   // Preferred port (default to 3000)
-  port: process.env.PORT || 3000
+  port: process.env.PORT || 3000,
+
+  // Messenger Platform API
+  mPlatformDomain: "https://graph.facebook.com",
+  mPlatformVersion: "v3.2",
+
+  get mPlatfom() {
+    return this.mPlatformDomain + "/" + this.mPlatformVersion;
+  },
 };
