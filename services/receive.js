@@ -15,6 +15,12 @@ class Receive {
         let responses;
 
         try {
+            if (event.message) {
+                let message = event.message;
+                if (message.text) {
+                    responses = this.handleTextMessage()
+                }
+            }
 
             if (event.postback) {
                 responses = this.handlePostback()
@@ -37,6 +43,15 @@ class Receive {
         } else {
             this.sendMessage(responses);
         }
+    }
+
+    handleTextMessage() {
+        console.log(
+            "Received text:",
+            `${this.webhookEvent.message.text} for ${this.user.psid}`
+        );
+
+        return response = Response.genNuxMessage(this.user);
     }
 
     handlePayload() {
