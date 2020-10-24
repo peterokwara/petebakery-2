@@ -3,6 +3,8 @@ const crypto = require("crypto")
 const bodyParser = require("body-parser")
 const config = require("./services/config")
 const Receive = require("./services/receive")
+const User = require("./services/user")
+const GraphAPi = require("./services/graph-api")
 
 const app = express()
 
@@ -34,39 +36,52 @@ app.post('/webhook', (req, res) => {
 
     let body = req.body;
 
-    // Checks this is an event from a page subscription
-    if (body.object === 'page') {
-
-        // Iterates over each entry - there may be multiple if batched
-        body.entry.forEach(function (entry) {
-
-            // Handle Page Changes event
-            let receiveMessage = new Receive();
-
-            // Gets the message. entry.messaging is an array, but 
-            // will only ever contain one message, so we get index 0
-            let webhook_event = entry.messaging[0];
-            console.log(webhook_event);
-
-            // Get the sender PSID
-            let sender_psid = webhook_event.sender.id;
-            console.log('Sender PSID: ' + sender_psid);
-
-            // Check if the event is a message or postback and
-            // pass the event to the appropriate handler function
-            if (webhook_event.message) {
-                receiveMessage.handleMessage(sender_psid, webhook_event.message)
-            } else if (webhook_event.postback) {
-                receiveMessage.handlePostback(sender_psid, webhook_event.message)
-            }
-
-        });
+    // Checks if this is an event from a page subscription
+    if (body.object === "page") {
 
         // Returns a '200 OK' response to all requests
-        res.status(200).send('EVENT_RECEIVED');
+        res.status(200).send("EVENT_RECEIVED");
+
+        body.entry.forEach(function (entry) {
+            // Gets the body of the webhook event
+            let webhookEvent = entry.messaging[0];
+
+            // Discard uninteresting events
+            if ("read" in webhookEvent) {
+                // console.log("Got a read event");
+                return;
+            }
+
+            if ("delivery" in webhookEvent) {
+                // console.log("Got a delivery event");
+                return;
+            }
+
+            // Get the sender PSID
+            let senderPsid = webhookEvent.sender.id;
+
+            if (!(senderPsid in users)) {
+                let user = new User(senderPsid)
+
+                GraphAPi.getUserProfile(senderPsid)
+                    .then(userProfile => {
+                        user.setProfile(userProfile)
+                    })
+                    .catch(error => {
+                        console.log("Profile is unavailable:", error)
+                    })
+                    .finally(() => {
+                        users[senderPsid] = user
+                    })
+                let receiveMessage = new Receive(users[senderPsid], webhookEvent)
+                return receiveMessage.handleMessage()
+            }
+
+            let receiveMessage = new Receive(users[senderPsid], webhookEvent);
+            return receiveMessage.handleMessage();
+        })
     } else {
-        // Returns a '404 Not Found' if event is not from a page subscription
-        res.sendStatus(404);
+        res.sendStatus(404)
     }
 
 });
@@ -89,8 +104,6 @@ function verifyRequestSignature(req, res, buf) {
         }
     }
 }
-
-
 
 var listener = app.listen(config.port, function () {
     console.log("Your app is listening on port " + listener.address().port)
