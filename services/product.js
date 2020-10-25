@@ -29,38 +29,47 @@ class Products {
                 break;
 
             // Respond with what size do you want for cakes
-            case "BUY_WHITE_FOREST_CAKE_PAYLOAD":
+            case "BUY_WHITE_FOREST_CAKE_PRODUCT_PAYLOAD":
+                response = [
+                    Response.genQuickReply(scripts.menu.size, {
+                        title: scripts.menu.size[0],
+                        payload: "CAKE_PRODUCT_SIZE_1"
+                    }, {
+                        title: scripts.menu.size[1],
+                        payload: "DOUGHNUT_PRODUCT_SIZE_2"
+                    }, {
+                        title: scripts.menu.size[2],
+                        payload: "DOUGHNUT_PRODUCT_sIZE_3"
+                    })
+                ]
+                break;
+
+            case "BUY_BLACK_FOREST_CAKE_PRODUCT_PAYLOAD":
                 response = [
                     Response.genQuickReply(scripts.menu.size, scripts.menu.size)
                 ]
                 break;
 
-            case "BUY_BLACK_FOREST_CAKE_PAYLOAD":
-                response = [
-                    Response.genQuickReply(scripts.menu.size, scripts.menu.size)
-                ]
-                break;
-
-            case "BUY_RED_VELVET_CAKE_PAYLOAD":
+            case "BUY_RED_VELVET_CAKE_PRODUCT_PAYLOAD":
                 response = [
                     Response.genQuickReply(scripts.menu.size, scripts.menu.size)
                 ]
                 break;
 
             // Respond with what amount you want for doughnuts
-            case "BUY_CHOCOLATE_FROSTED_DOUGHNUT_PAYLOAD":
+            case "BUY_CHOCOLATE_FROSTED_DOUGHNUT_PRODUCT_PAYLOAD":
                 response = [
                     Response.genQuickReply()
                 ]
                 break;
 
-            case "BUY_STRAWBERRY_FROSTED_DOUGHNUT_PAYLOAD":
+            case "BUY_STRAWBERRY_FROSTED_DOUGHNUT_PRODUCT_PAYLOAD":
                 response = [
                     Response.genQuickReply()
                 ]
                 break;
 
-            case "BUY_JELLY_DOUGHNUT_PAYLOAD":
+            case "BUY_JELLY_DOUGHNUT_PRODUCT_PAYLOAD":
                 response = [
                     Response.genQuickReply()
                 ]
