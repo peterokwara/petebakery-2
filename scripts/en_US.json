@@ -47,7 +47,7 @@
       "doughnut": [
         {
           "title": "Chocolate frosted doughnut",
-          "image_url": "",
+          "image_url": "https://cdn.sallysbakingaddiction.com/wp-content/uploads/2014/04/Sallys-Baking-Addiction-Chocolate-Frosted-Donuts.jpg",
           "buttons": [
             {
               "type": "postback",
@@ -58,7 +58,7 @@
         },
         {
           "title": "STRAWBERRY_FROSTED_DOUGHNUT",
-          "image_url": "",
+          "image_url": "https://cdn.sallysbakingaddiction.com/wp-content/uploads/2012/07/Strawberry-Frosted-Donuts.jpg",
           "buttons": [
             {
               "type": "postback",
@@ -69,7 +69,7 @@
         },
         {
           "title": "JELLY_DOUGHNUT",
-          "image_url": "",
+          "image_url": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Jelly-Doughnuts_EXPS_GBHRBZ17_17086_D07_07_1b-696x696.jpg",
           "buttons": [
             {
               "type": "postback",
