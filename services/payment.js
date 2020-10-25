@@ -18,11 +18,11 @@ class IotaPayment {
   }
 
   // create a conditional deposit account for payment
-  createPaymentLink(account, amount, message) {
+  async createPaymentLink(account, amount, message) {
     let magnetLink;
     let paymentAddress;
 
-    magnetLink = this.timeSource().then(((time) => {
+    await this.timeSource().then(((time) => {
       account.generateCDA({
         // Set the CDA to expire tomorrow
         timeoutAt: time.getTime() + 30 * 1000
