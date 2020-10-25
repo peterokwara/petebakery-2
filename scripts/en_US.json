@@ -61,7 +61,7 @@
             {
               "type": "postback",
               "title": "Buy now",
-              "payload": "BUY_CHOCOLATE_FROSTED_DOUGHNUT_PAYLOAD"
+              "payload": "BUY_CHOCOLATE_FROSTED_DOUGHNUT_PRODUCT_PAYLOAD"
             }
           ]
         },
@@ -72,7 +72,7 @@
             {
               "type": "postback",
               "title": "Buy now",
-              "payload": "BUY_STRAWBERRY_FROSTED_DOUGHNUT_PAYLOAD"
+              "payload": "BUY_JELLY_DOUGHNUT_PRODUCT_PAYLOAD"
             }
           ]
         },
