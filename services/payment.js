@@ -3,6 +3,7 @@ const { createAccount } = require('@iota/account');
 const CDA = require("@iota/cda");
 const ntpClient = require("ntp-client");
 const util = require("util");
+const Response = require("./response");
 
 class IotaPayment {
 
@@ -30,6 +31,7 @@ class IotaPayment {
         paymentAddress = magnetLink.slice(7, 88);
         // console.log(magnetLink);
         console.log(`Address is ${paymentAddress} magnet link is ${magnetLink}`);
+        return magnetLink;
       }).catch((error) => {
         console.log(error);
         // Close the database and stop any ongoing reattachments
