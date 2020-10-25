@@ -52,7 +52,7 @@ class Receive {
         );
 
         if (this.webhookEvent.message.text == "hello") {
-            Response.genNuxMessage(this.user)
+            return Response.genNuxMessage(this.user)
         }
 
         return Response.genText("hello");
