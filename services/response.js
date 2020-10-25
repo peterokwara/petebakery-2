@@ -10,7 +10,7 @@ class Response {
                 payload: {
                     template_type: "generic",
                     elements: [
-                        content
+                        ...content
                     ]
                 }
             }
