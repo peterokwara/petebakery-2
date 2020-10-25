@@ -33,13 +33,13 @@ class Products {
                 response = [
                     Response.genQuickReply(scripts.menu.size, [{
                         title: scripts.menu.cake_sizes[0],
-                        payload: "CAKE_PRODUCT_SIZE_1"
+                        payload: scripts.menu.cake_sizes_payload[0]
                     }, {
                         title: scripts.menu.cake_sizes[1],
-                        payload: "DOUGHNUT_PRODUCT_SIZE_2"
+                        payload: scripts.menu.cake_sizes_payload[1]
                     }, {
                         title: scripts.menu.cake_sizes[2],
-                        payload: "DOUGHNUT_PRODUCT_sIZE_3"
+                        payload: scripts.menu.cake_sizes_payload[2]
                     }])
                 ]
                 break;

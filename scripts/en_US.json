@@ -11,7 +11,8 @@
       "doughnut_amout": [ 3 , 6 , 12],
       "size": "What size of cake do you want (kg)?",
       "cake_sizes":[500, 1000, 2000],
-      "cake_amout": [ 1, 2, 3]
+      "cake_sizes_payload": ["CAKE_PRODUCT_SIZE_1","CAKE_PRODUCT_SIZE_2", "CAKE_PRODUCT_SIZE_3"],
+      "cake_amount": [ 1, 2, 3]
     },
     "products": {
       "cakes": [
