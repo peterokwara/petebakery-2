@@ -15,12 +15,12 @@ class Receive {
         let responses;
 
         try {
-            // if (event.message) {
-            //     let message = event.message;
-            //     if (message.text) {
-            //         responses = this.handleTextMessage()
-            //     }
-            // }
+            if (event.message) {
+                let message = event.message;
+                if (message.text) {
+                    responses = this.handleTextMessage()
+                }
+            }
 
             if (event.postback) {
                 responses = this.handlePostback()
@@ -51,7 +51,7 @@ class Receive {
             `${this.webhookEvent.message.text} for ${this.user.psid}`
         );
 
-        return Response.genNuxMessage(this.user);
+        return Response.genText("hello");
     }
 
     handlePayload() {
