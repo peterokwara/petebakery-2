@@ -31,16 +31,16 @@ class Products {
             // Respond with what size do you want for cakes
             case "BUY_WHITE_FOREST_CAKE_PRODUCT_PAYLOAD":
                 response = [
-                    Response.genQuickReply(scripts.menu.size, {
-                        title: "1",
+                    Response.genQuickReply(scripts.menu.size, [{
+                        title: scripts.menu.cake_sizes[0],
                         payload: "CAKE_PRODUCT_SIZE_1"
                     }, {
-                        title: "2",
+                        title: scripts.menu.cake_sizes[1],
                         payload: "DOUGHNUT_PRODUCT_SIZE_2"
                     }, {
-                        title: "3",
+                        title: scripts.menu.cake_sizes[2],
                         payload: "DOUGHNUT_PRODUCT_sIZE_3"
-                    })
+                    }])
                 ]
                 break;
 
