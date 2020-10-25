@@ -1,6 +1,23 @@
 const scripts = require("../scripts/en_US.json")
 
 class Response {
+
+    static genGenericTemplate(content) {
+        let response = {
+            attachment: {
+                type: "template",
+                payload: {
+                    template_type: "generic",
+                    elements: [
+                        content
+                    ]
+                }
+            }
+        };
+
+        return response;
+    }
+
     static genQuickReply(text, quickReplies) {
         let response = {
             text: text,
@@ -38,10 +55,10 @@ class Response {
         let curation = this.genQuickReply(scripts.get_started.help, [
             {
                 title: scripts.menu.product_1,
-                payload: "PRODUCT_1"
+                payload: "CAKE_PRODUCT_PAYLOAD"
             }, {
                 title: scripts.menu.product_2,
-                payload: "PRODUCT_2"
+                payload: "DOUGHNUT_PRODUCT_PAYLOAD"
             }
         ])
 

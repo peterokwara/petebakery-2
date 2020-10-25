@@ -1,6 +1,7 @@
 const GraphApi = require("./graph-api")
 const scripts = require("../scripts/en_US.json")
 const Response = require("./response")
+const Product = require("./product")
 
 class Receive {
     constructor(user, webhookEvent) {
@@ -63,6 +64,9 @@ class Receive {
 
         if (payload === "GET_STARTED") {
             response = Response.genNuxMessage(this.user);
+        } else if (payload.includes(PRODUCT)) {
+            let product = new Product(this.user.this.webhookEvent)
+            response = product.handlePayLoad(payload)
         }
 
         return response;
