@@ -11,54 +11,84 @@
     "products": {
         "cakes":[
             {
-                "title":"White forest cake",
-                "buttons":[{
-                    "type":"postback",
-                    "title":"Buy now",
-                    "payload":"WHITE_FOREST_CAKE_PAYLOAD"
-                }]
+                "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                        "title":"White forest cake",
+                        "buttons":[{
+                            "type":"postback",
+                            "title":"Buy now",
+                            "payload":"WHITE_FOREST_CAKE_PAYLOAD"
+                        }]
+                    }]
+                }   
             },
             {
-                "title":"Black forest cake",
-                "buttons":[{
-                    "type":"postback",
-                    "title":"Buy now",
-                    "payload":"BLACK_FOREST_CAKE_PAYLOAD"
-                }]
+                "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                        "title":"Black forest cake",
+                        "buttons":[{
+                            "type":"postback",
+                            "title":"Buy now",
+                            "payload":"BLACK_FOREST_CAKE_PAYLOAD"
+                        }]
+                    }]
+                }   
             },
             {
-                "title":"Red velvet cake",
-                "buttons":[{
-                    "type":"postback",
-                    "title":"Buy now",
-                    "payload":"RED_VELVET_CAKE_PAYLOAD"
-                }]
+                "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                        "title":"Red velvet cake",
+                        "buttons":[{
+                            "type":"postback",
+                            "title":"Buy now",
+                            "payload":"RED_VELVET_CAKE_PAYLOAD"
+                        }]
+                    }]
+                }   
             }
         ],
         "doughnut":[
             {
+                "payload": {
+                    "template_type": "generic",
+                    "elements": [{
                 "title":"Chocolate frosted doughnut",
                 "buttons":[{
                     "type":"postback",
                     "title":"Buy now",
                     "payload":"CHOCOLATE_FROSTED_DOUGHNUT_PAYLOAD"
                 }]
+            }]
+                }   
             },
             {
-                "title":"STRAWBERRY_FROSTED_DOUGHNUT",
-                "buttons":[{
-                    "type":"postback",
-                    "title":"Buy now",
-                    "payload":"STRAWBERRY_FROSTED_DOUGHNUT_PAYLOAD"
-                }]
+                "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                        "title":"STRAWBERRY_FROSTED_DOUGHNUT",
+                        "buttons":[{
+                            "type":"postback",
+                            "title":"Buy now",
+                            "payload":"STRAWBERRY_FROSTED_DOUGHNUT_PAYLOAD"
+                        }]
+                    }]
+                }   
             },
             {
-                "title":"JELLY_DOUGHNUT",
-                "buttons":[{
-                    "type":"postback",
-                    "title":"Buy now",
-                    "payload":"JELLY_DOUGHNUT_PAYLOAD"
-                }]
+                "payload": {
+                    "template_type": "generic",
+                    "elements": [{
+                        "title":"JELLY_DOUGHNUT",
+                        "buttons":[{
+                            "type":"postback",
+                            "title":"Buy now",
+                            "payload":"JELLY_DOUGHNUT_PAYLOAD"
+                        }]
+                    }]
+                }   
             }
         ]
     }
