@@ -15,14 +15,14 @@ class Products {
             case "CAKE_PRODUCT_PAYLOAD":
                 console.log("cake selected brouh")
                 response = [
-                    Response.genGenericTemplate(...scripts.products.cakes)
+                    Response.genGenericTemplate(scripts.products.cakes)
                 ]
                 break;
 
             case "DOUGHNUT_PRODUCT_PAYLOAD":
                 console.log("Doughnut selected brouh")
                 response = [
-                    Response.genGenericTemplate(...scripts.products.doughnut)
+                    Response.genGenericTemplate(scripts.products.doughnut)
                 ]
                 break;
 
