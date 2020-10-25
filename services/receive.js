@@ -21,9 +21,9 @@ class Receive {
                 if (message.quick_reply) {
                     responses = this.handleQuickReply();
                 }
-                if (message.text) {
-                    responses = this.handleTextMessage()
-                }
+                // if (message.text) {
+                //     responses = this.handleTextMessage()
+                // }
             }
 
             if (event.postback) {
