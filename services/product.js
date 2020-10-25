@@ -33,7 +33,7 @@ class Products {
                 || "BUY_BLACK_FOREST_CAKE_PRODUCT_PAYLOAD"
                 || "BUY_RED_VELVET_CAKE_PRODUCT_PAYLOAD":
                 response = [
-                    Response.genQuickReply(scripts.menu.size, [{
+                    Response.genQuickReply(scripts.menu.cake_size, [{
                         title: scripts.menu.cake_sizes[0],
                         payload: scripts.menu.cake_sizes_payload[0]
                     }, {
