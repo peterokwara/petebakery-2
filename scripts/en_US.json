@@ -1,95 +1,77 @@
 {
-    "get_started":{
-        "welcome": "Hi and welcome to PeteBakery! Home of the best and freshest bakery in town!",
-        "guidance": "At any time, use the menu below to navigate through the features.",
-        "help": "What would you like to order today?"
+    "get_started": {
+      "welcome": "Hi and welcome to PeteBakery! Home of the best and freshest bakery in town!",
+      "guidance": "At any time, use the menu below to navigate through the features.",
+      "help": "What would you like to order today?"
     },
     "menu": {
-        "product_1":"Order a cake",
-        "product_2": "Order a doughnut"
+      "product_1": "Order a cake",
+      "product_2": "Order a doughnut"
     },
     "products": {
-        "cakes":[
+      "cakes": [
+        {
+          "title": "White forest cake",
+          "buttons": [
             {
-                "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                        "title":"White forest cake",
-                        "buttons":[{
-                            "type":"postback",
-                            "title":"Buy now",
-                            "payload":"WHITE_FOREST_CAKE_PAYLOAD"
-                        }]
-                    }]
-                }   
-            },
-            {
-                "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                        "title":"Black forest cake",
-                        "buttons":[{
-                            "type":"postback",
-                            "title":"Buy now",
-                            "payload":"BLACK_FOREST_CAKE_PAYLOAD"
-                        }]
-                    }]
-                }   
-            },
-            {
-                "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                        "title":"Red velvet cake",
-                        "buttons":[{
-                            "type":"postback",
-                            "title":"Buy now",
-                            "payload":"RED_VELVET_CAKE_PAYLOAD"
-                        }]
-                    }]
-                }   
+              "type": "postback",
+              "title": "Buy now",
+              "payload": "WHITE_FOREST_CAKE_PAYLOAD"
             }
-        ],
-        "doughnut":[
+          ]
+        },
+        {
+          "title": "Black forest cake",
+          "buttons": [
             {
-                "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                "title":"Chocolate frosted doughnut",
-                "buttons":[{
-                    "type":"postback",
-                    "title":"Buy now",
-                    "payload":"CHOCOLATE_FROSTED_DOUGHNUT_PAYLOAD"
-                }]
-            }]
-                }   
-            },
-            {
-                "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                        "title":"STRAWBERRY_FROSTED_DOUGHNUT",
-                        "buttons":[{
-                            "type":"postback",
-                            "title":"Buy now",
-                            "payload":"STRAWBERRY_FROSTED_DOUGHNUT_PAYLOAD"
-                        }]
-                    }]
-                }   
-            },
-            {
-                "payload": {
-                    "template_type": "generic",
-                    "elements": [{
-                        "title":"JELLY_DOUGHNUT",
-                        "buttons":[{
-                            "type":"postback",
-                            "title":"Buy now",
-                            "payload":"JELLY_DOUGHNUT_PAYLOAD"
-                        }]
-                    }]
-                }   
+              "type": "postback",
+              "title": "Buy now",
+              "payload": "BLACK_FOREST_CAKE_PAYLOAD"
             }
-        ]
+          ]
+        },
+        {
+          "title": "Red velvet cake",
+          "buttons": [
+            {
+              "type": "postback",
+              "title": "Buy now",
+              "payload": "RED_VELVET_CAKE_PAYLOAD"
+            }
+          ]
+        }
+      ],
+      "doughnut": [
+        {
+          "title": "Chocolate frosted doughnut",
+          "buttons": [
+            {
+              "type": "postback",
+              "title": "Buy now",
+              "payload": "CHOCOLATE_FROSTED_DOUGHNUT_PAYLOAD"
+            }
+          ]
+        },
+        {
+          "title": "STRAWBERRY_FROSTED_DOUGHNUT",
+          "buttons": [
+            {
+              "type": "postback",
+              "title": "Buy now",
+              "payload": "STRAWBERRY_FROSTED_DOUGHNUT_PAYLOAD"
+            }
+          ]
+        },
+        {
+          "title": "JELLY_DOUGHNUT",
+          "buttons": [
+            {
+              "type": "postback",
+              "title": "Buy now",
+              "payload": "JELLY_DOUGHNUT_PAYLOAD"
+            }
+          ]
+        }
+      ]
     }
-}
+  }
