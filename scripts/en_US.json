@@ -12,7 +12,7 @@
       "cakes": [
         {
           "title": "White forest cake",
-          "image_url": "../assets/products/white_forest.jpg",
+          "image_url": "https://img-global.cpcdn.com/recipes/17c38f2f58b6f2d3/751x532cq70/white-forest-cake-recipe-main-photo.jpg",
           "buttons": [
             {
               "type": "postback",
@@ -23,7 +23,7 @@
         },
         {
           "title": "Black forest cake",
-          "image_url": "../assets/products/white_forest.jpg",
+          "image_url": "https://cdn.sallysbakingaddiction.com/wp-content/uploads/2018/11/black-forest-cake-4-600x900.jpg",
           "buttons": [
             {
               "type": "postback",
@@ -34,7 +34,7 @@
         },
         {
           "title": "Red velvet cake",
-          "image_url": "../assets/products/white_forest.jpg",
+          "image_url": "https://i2.wp.com/www.livewellbakeoften.com/wp-content/uploads/2019/01/Red-Velvet-Cake-3.jpg?w=745&ssl=1",
           "buttons": [
             {
               "type": "postback",
