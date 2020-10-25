@@ -12,6 +12,7 @@
       "cakes": [
         {
           "title": "White forest cake",
+          "image_url": "../products/white_forest.jpg",
           "buttons": [
             {
               "type": "postback",
@@ -22,6 +23,7 @@
         },
         {
           "title": "Black forest cake",
+          "image_url": "",
           "buttons": [
             {
               "type": "postback",
@@ -32,6 +34,7 @@
         },
         {
           "title": "Red velvet cake",
+          "image_url": "",
           "buttons": [
             {
               "type": "postback",
@@ -44,6 +47,7 @@
       "doughnut": [
         {
           "title": "Chocolate frosted doughnut",
+          "image_url": "",
           "buttons": [
             {
               "type": "postback",
@@ -54,6 +58,7 @@
         },
         {
           "title": "STRAWBERRY_FROSTED_DOUGHNUT",
+          "image_url": "",
           "buttons": [
             {
               "type": "postback",
@@ -64,6 +69,7 @@
         },
         {
           "title": "JELLY_DOUGHNUT",
+          "image_url": "",
           "buttons": [
             {
               "type": "postback",
