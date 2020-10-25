@@ -22,7 +22,7 @@ class IotaPayment {
     let magnetLink;
     let paymentAddress;
 
-    this.timeSource().then(((time) => {
+    magnetLink = this.timeSource().then(((time) => {
       account.generateCDA({
         // Set the CDA to expire tomorrow
         timeoutAt: time.getTime() + 30 * 1000
@@ -31,7 +31,6 @@ class IotaPayment {
         paymentAddress = magnetLink.slice(7, 88);
         // console.log(magnetLink);
         console.log(`Address is ${paymentAddress} magnet link is ${magnetLink}`);
-        return magnetLink;
       }).catch((error) => {
         console.log(error);
         // Close the database and stop any ongoing reattachments

@@ -93,7 +93,7 @@ class Products {
                 const iotaPayment = new IotaPayment()
                 const account = iotaPayment.createAccount()
                 console.log(`account is ${account}`)
-                const paymentLink = iotaPayment.createPaymentLink(account)
+                const paymentLink = iotaPayment.createPaymentLink(account,10,"hello there")
                 console.log(`pay pay link is ${paymentLink}`)
                 response = [
                     Response.genWebUrlButton("well, hello there!", paymentLink)
