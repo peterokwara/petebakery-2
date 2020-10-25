@@ -6,7 +6,9 @@
     },
     "menu": {
       "product_1": "Order a cake",
-      "product_2": "Order a doughnut"
+      "product_2": "Order a doughnut",
+      "amount": "How many do you want?",
+      "size": "What size of cake do you want?"
     },
     "products": {
       "cakes": [
@@ -17,7 +19,7 @@
             {
               "type": "postback",
               "title": "Buy now",
-              "payload": "WHITE_FOREST_CAKE_PAYLOAD"
+              "payload": "BUY_WHITE_FOREST_CAKE_PAYLOAD"
             }
           ]
         },
@@ -28,7 +30,7 @@
             {
               "type": "postback",
               "title": "Buy now",
-              "payload": "BLACK_FOREST_CAKE_PAYLOAD"
+              "payload": "BUY_BLACK_FOREST_CAKE_PAYLOAD"
             }
           ]
         },
@@ -39,7 +41,7 @@
             {
               "type": "postback",
               "title": "Buy now",
-              "payload": "RED_VELVET_CAKE_PAYLOAD"
+              "payload": "BUY_RED_VELVET_CAKE_PAYLOAD"
             }
           ]
         }
@@ -52,32 +54,34 @@
             {
               "type": "postback",
               "title": "Buy now",
-              "payload": "CHOCOLATE_FROSTED_DOUGHNUT_PAYLOAD"
+              "payload": "BUY_CHOCOLATE_FROSTED_DOUGHNUT_PAYLOAD"
             }
           ]
         },
         {
-          "title": "STRAWBERRY_FROSTED_DOUGHNUT",
+          "title": "Strawberry frosted doughnut",
           "image_url": "https://cdn.sallysbakingaddiction.com/wp-content/uploads/2012/07/Strawberry-Frosted-Donuts.jpg",
           "buttons": [
             {
               "type": "postback",
               "title": "Buy now",
-              "payload": "STRAWBERRY_FROSTED_DOUGHNUT_PAYLOAD"
+              "payload": "BUY_STRAWBERRY_FROSTED_DOUGHNUT_PAYLOAD"
             }
           ]
         },
         {
-          "title": "JELLY_DOUGHNUT",
+          "title": "Jelly doughnut",
           "image_url": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Jelly-Doughnuts_EXPS_GBHRBZ17_17086_D07_07_1b-696x696.jpg",
           "buttons": [
             {
               "type": "postback",
               "title": "Buy now",
-              "payload": "JELLY_DOUGHNUT_PAYLOAD"
+              "payload": "BUY_JELLY_DOUGHNUT_PAYLOAD"
             }
           ]
         }
-      ]
+      ],
+      "list_cakes":"Here is a list of cakes we have",
+      "list_doughnuts":"List of doughnuts we have"
     }
   }
