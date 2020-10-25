@@ -12,7 +12,7 @@
       "cakes": [
         {
           "title": "White forest cake",
-          "image_url": "../products/white_forest.jpg",
+          "image_url": "../assets/products/white_forest.jpg",
           "buttons": [
             {
               "type": "postback",
