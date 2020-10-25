@@ -40,6 +40,7 @@ app.post('/webhook', (req, res) => {
     // Checks if this is an event from a page subscription
     if (body.object === "page") {
 
+
         // Returns a '200 OK' response to all requests
         res.status(200).send("EVENT_RECEIVED");
 
@@ -47,44 +48,13 @@ app.post('/webhook', (req, res) => {
             // Gets the body of the webhook event
             let webhookEvent = entry.messaging[0];
 
-            // Discard uninteresting events
-            if ("read" in webhookEvent) {
-                // console.log("Got a read event");
-                return;
-            }
-
-            if ("delivery" in webhookEvent) {
-                // console.log("Got a delivery event");
-                return;
-            }
-
             // Get the sender PSID
             let senderPsid = webhookEvent.sender.id;
-
-            if (!(senderPsid in users)) {
-                let user = new User(senderPsid);
-
-                GraphAPi.getUserProfile(senderPsid)
-                    .then(userProfile => {
-                        user.setProfile(userProfile);
-                    })
-                    .catch(error => {
-                        // The profile is unavailable
-                        console.log("Profile is unavailable:", error);
-                    })
-                    .finally(() => {
-                        users[senderPsid] = user;
-                        console.log(
-                            "New Profile PSID:",
-                            senderPsid
-                        );
-                        let receiveMessage = new Receive(users[senderPsid], webhookEvent);
-                        return receiveMessage.handleMessage();
-                    });
-            }
+            users[senderPsid] = user;
 
             let receiveMessage = new Receive(users[senderPsid], webhookEvent);
             return receiveMessage.handleMessage();
+
         })
     } else {
         res.sendStatus(404)
