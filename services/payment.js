@@ -28,9 +28,8 @@ class IotaPayment {
         timeoutAt: time.getTime() + 30 * 1000
       }).then((cda) => {
         magnetLink = `${CDA.serializeCDAMagnet(cda)}&amount=${amount}&message=${message}`;
-        paymentAddress = magnetLink.slice(7, 88);
         // console.log(magnetLink);
-        console.log(`Address is ${paymentAddress} magnet link is ${magnetLink}`);
+        console.log(`Magnet link is ${magnetLink}`);
       }).catch((error) => {
         console.log(error);
         // Close the database and stop any ongoing reattachments
