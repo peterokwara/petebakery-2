@@ -20,10 +20,11 @@ class Receive {
 
                 if (message.quick_reply) {
                     responses = this.handleQuickReply();
+                } else if (message.text) {
+                    responses = this.handleTextMessage();
                 }
             } else if (event.postback) {
                 responses = this.handlePostback()
-
             }
         } catch (error) {
             console.error(error);
@@ -58,11 +59,19 @@ class Receive {
             `${this.webhookEvent.message.text} for ${this.user.psid}`
         );
 
-        if (this.webhookEvent.message.text == "hello") {
-            return Response.genNuxMessage(this.user)
-        }
+        // let message = this.webhookEvent.message.text.trim().toLowerCase();
 
-        return Response.genText("hello");
+        // let response;
+
+        // if (this.webhookEvent.message.text == "hello") {
+        //     response = Response.genNuxMessage(this.user)
+        // } else {
+        //     resopnse = Response.genNuxMessage(this.user)
+        // }
+
+        // return response;
+
+        return Response.genNuxMessage(this.user)
     }
 
     handlePayload(payload) {
