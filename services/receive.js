@@ -21,9 +21,9 @@ class Receive {
                 if (message.quick_reply) {
                     responses = this.handleQuickReply();
                 }
-                if (message.text) {
-                    responses = this.handleTextMessage()
-                }
+                // if (message.text) {
+                //     responses = this.handleTextMessage()
+                // }
             }
 
             if (event.postback) {
@@ -78,7 +78,7 @@ class Receive {
 
         let response;
 
-        if (payload === "GET_STARTED") {
+        if (payload === "GET_STARTED_PAYLOAD") {
             response = Response.genNuxMessage(this.user);
         } else if (payload.includes("CAKE_PRODUCT_PAYLOAD")) {
             let product = new Product(this.user, this.webhookEvent)
