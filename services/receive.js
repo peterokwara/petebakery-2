@@ -70,7 +70,7 @@ class Receive {
         return Response.genText("hello");
     }
 
-    handlePayload() {
+    handlePayload(payload) {
         console.log("Received Payload:", `${payload} for ${this.user.psid}`);
 
         // Log CTA event in FBA
