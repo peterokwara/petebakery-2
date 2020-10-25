@@ -21,15 +21,10 @@ class Receive {
                 if (message.quick_reply) {
                     responses = this.handleQuickReply();
                 }
-                // if (message.text) {
-                //     responses = this.handleTextMessage()
-                // }
-            }
-
-            if (event.postback) {
+            } else if (event.postback) {
                 responses = this.handlePostback()
-            }
 
+            }
         } catch (error) {
             console.error(error);
             responses = {
