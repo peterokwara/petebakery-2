@@ -23,7 +23,7 @@
         },
         {
           "title": "Black forest cake",
-          "image_url": "",
+          "image_url": "../assets/products/white_forest.jpg",
           "buttons": [
             {
               "type": "postback",
@@ -34,7 +34,7 @@
         },
         {
           "title": "Red velvet cake",
-          "image_url": "",
+          "image_url": "../assets/products/white_forest.jpg",
           "buttons": [
             {
               "type": "postback",
