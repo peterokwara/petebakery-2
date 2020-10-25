@@ -23,6 +23,8 @@ class Products {
                     Response.genGenericTemplate(scripts.products.doughnut)
                 ]
                 break;
+
+        
             // case "PRODUCT_1_SIZE":
             //     response = []
             //     break;
