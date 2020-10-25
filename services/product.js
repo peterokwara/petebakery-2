@@ -28,25 +28,26 @@ class Products {
                 ]
                 break;
 
-            // Respond with what size do you want
+            // Respond with what size do you want for cakes
             case "BUY_WHITE_FOREST_CAKE_PAYLOAD":
                 response = [
-                    Response.genQuickReply()
+                    Response.genQuickReply(scripts.menu.size, scripts.menu.size)
                 ]
                 break;
 
             case "BUY_BLACK_FOREST_CAKE_PAYLOAD":
                 response = [
-                    Response.genQuickReply()
+                    Response.genQuickReply(scripts.menu.size, scripts.menu.size)
                 ]
                 break;
 
             case "BUY_RED_VELVET_CAKE_PAYLOAD":
                 response = [
-                    Response.genQuickReply()
+                    Response.genQuickReply(scripts.menu.size, scripts.menu.size)
                 ]
                 break;
 
+            // Respond with what amount you want for doughnuts
             case "BUY_CHOCOLATE_FROSTED_DOUGHNUT_PAYLOAD":
                 response = [
                     Response.genQuickReply()
