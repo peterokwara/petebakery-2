@@ -64,7 +64,7 @@ class Receive {
 
         if (payload === "GET_STARTED") {
             response = Response.genNuxMessage(this.user);
-        } else if (payload.includes(PRODUCT)) {
+        } else if (payload.includes("PRODUCT")) {
             let product = new Product(this.user.this.webhookEvent)
             response = product.handlePayLoad(payload)
         }
