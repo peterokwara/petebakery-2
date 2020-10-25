@@ -87,9 +87,6 @@ class Receive {
         } else if (payload.search("PRODUCT")) {
             let product = new Product(this.user, this.webhookEvent)
             response = product.handlePayLoad(payload)
-        } else if (payload === "DOUGHNUT_PRODUCT_PAYLOAD") {
-            let product = new Product(this.user, this.webhookEvent)
-            response = product.handlePayLoad(payload)
         } else {
             response = {
                 text: `This is a default postback message for payload: ${payload}!`
