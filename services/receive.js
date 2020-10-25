@@ -86,6 +86,10 @@ class Receive {
         } else if (payload.includes("DOUGHNUT_PRODUCT_PAYLOAD")) {
             let product = new Product(this.user, this.webhookEvent)
             response = product.handlePayLoad(payload)
+        } else {
+            response = {
+                text: `This is a default postback message for payload: ${payload}!`
+            };
         }
 
         return response;
