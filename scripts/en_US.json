@@ -7,13 +7,14 @@
     "menu": {
       "product_1": "Order a cake",
       "product_2": "Order a doughnut",
-      "amount": "How many do you want?",
-      "doughnut_amount": [ 3 , 6 , 12],
+      "doughnut_amount": "How many do you want?",
+      "doughnut_amounts": [ 3 , 6 , 12],
       "doughnut_amount_payload":["DOUGHNUT_PRODUCT_AMOUNT_1","DOUGHNUT_PRODUCT_AMOUNT_2","DOUGHNUT_PRODUCT_AMOUNT_3"],
-      "size": "What size of cake do you want (kg)?",
+      "cake_size": "What size of cake do you want (kg)?",
       "cake_sizes":[500, 1000, 2000],
       "cake_sizes_payload": ["CAKE_PRODUCT_SIZE_1","CAKE_PRODUCT_SIZE_2", "CAKE_PRODUCT_SIZE_3"],
-      "cake_amount": [ 1, 2, 3],
+      "cake_amount":"How may cakes do you want?",
+      "cake_amounts": [ 1, 2, 3],
       "cake_amount_payload": ["CAKE_PRODUCT_AMOUNT_1", "CAKE_PRODUCT_AMOUNT_2", "CAKE_PRODUCT_AMOUNT_3"]
     },
     "products": {

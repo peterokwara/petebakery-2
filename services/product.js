@@ -46,26 +46,41 @@ class Products {
                 ]
                 break;
 
+            // Respond with what amount of cakes do you want
+            case "CAKE_PRODUCT_SIZE_1"
+                || "CAKE_PRODUCT_SIZE_2"
+                || "CAKE_PRODUCT_SIZE_3":
+                response = [
+                    Response.genQuickReply(scripts.menu.cake_amount, [{
+                        title: scripts.menu.cake_amounts[0],
+                        payload: scripts.menu.cake_amount_payload[0]
+                    }, {
+                        title: scripts.menu.cake_amounts[1],
+                        payload: scripts.menu.cake_amount_payload[1]
+                    }, {
+                        title: scripts.menu.cake_amounts[2],
+                        payload: scripts.menu.cake_amount_payload[2]
+                    }])
+                ]
+                break;
+
             // Respond with what amount you want for doughnuts
-            case "BUY_CHOCOLATE_FROSTED_DOUGHNUT_PRODUCT_PAYLOAD":
+            case "BUY_CHOCOLATE_FROSTED_DOUGHNUT_PRODUCT_PAYLOAD"
+                || "BUY_STRAWBERRY_FROSTED_DOUGHNUT_PRODUCT_PAYLOAD"
+                || "BUY_JELLY_DOUGHNUT_PRODUCT_PAYLOAD":
                 response = [
-                    Response.genQuickReply()
+                    Response.genQuickReply(scripts.menu.doughnut_amount, [{
+                        title: scripts.menu.doughnut_amounts[0],
+                        payload: scripts.menu.doughnut_amount_payload[0]
+                    }, {
+                        title: scripts.menu.doughnut_amounts[1],
+                        payload: scripts.menu.doughnut_amount_payload[1]
+                    }, {
+                        title: scripts.menu.doughnut_amounts[2],
+                        payload: scripts.menu.doughnut_amount_payload[2]
+                    }])
                 ]
                 break;
-
-            case "BUY_STRAWBERRY_FROSTED_DOUGHNUT_PRODUCT_PAYLOAD":
-                response = [
-                    Response.genQuickReply()
-                ]
-                break;
-
-            case "BUY_JELLY_DOUGHNUT_PRODUCT_PAYLOAD":
-                response = [
-                    Response.genQuickReply()
-                ]
-                break;
-
-
             default:
                 break;
         }
