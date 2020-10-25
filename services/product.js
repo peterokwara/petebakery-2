@@ -91,8 +91,8 @@ class Products {
             case "CAKE_PRODUCT_AMOUNT_2":
             case "CAKE_PRODUCT_AMOUNT_3":
                 const iotaPayment = new IotaPayment()
-                iotaPayment.createAccount()
-                const paymentLink = iotaPayment.createPaymentLink()
+                const account = iotaPayment.createAccount()
+                const paymentLink = iotaPayment.createPaymentLink(account)
                 response = [
                     Response.genWebUrlButton("well, hello there!", paymentLink)
                 ]
