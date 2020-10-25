@@ -37,7 +37,7 @@
         ],
         "doughnut":[
             {
-                "title":"CHOCOLATE_FROSTED_DOUGHNUT",
+                "title":"Chocolate frosted doughnut",
                 "buttons":[{
                     "type":"postback",
                     "title":"Buy now",

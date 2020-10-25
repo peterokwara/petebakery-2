@@ -3,6 +3,7 @@ const scripts = require("../scripts/en_US.json")
 class Response {
 
     static genGenericTemplate(content) {
+        console.log(`content is ${content}`)
         let response = {
             attachment: {
                 type: "template",
