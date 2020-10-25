@@ -1,11 +1,11 @@
 {
     "get_started":{
-        "welcome": "Hi {{username}} and welcome to PeteBakery! Home of the best and freshest bakery in town!",
+        "welcome": "Hi {{userFirstName}} and welcome to PeteBakery! Home of the best and freshest bakery in town!",
         "guidance": "At any time, use the menu below to navigate through the features.",
         "help": "What would you like to order today?"
     },
     "menu": {
-        "product_1":"Cake",
-        "product_2": "Doughnut"
+        "product_1":"Order a cake",
+        "product_2": "Order a doughnut"
     }
 }
