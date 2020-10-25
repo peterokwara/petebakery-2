@@ -29,9 +29,9 @@ class Products {
                 break;
 
             // Respond with what size do you want for cakes
-            case "BUY_WHITE_FOREST_CAKE_PRODUCT_PAYLOAD"
-                || "BUY_BLACK_FOREST_CAKE_PRODUCT_PAYLOAD"
-                || "BUY_RED_VELVET_CAKE_PRODUCT_PAYLOAD":
+            case "BUY_WHITE_FOREST_CAKE_PRODUCT_PAYLOAD":
+            case "BUY_BLACK_FOREST_CAKE_PRODUCT_PAYLOAD":
+            case "BUY_RED_VELVET_CAKE_PRODUCT_PAYLOAD":
                 response = [
                     Response.genQuickReply(scripts.menu.cake_size, [{
                         title: scripts.menu.cake_sizes[0],
@@ -47,9 +47,9 @@ class Products {
                 break;
 
             // Respond with what amount of cakes do you want
-            case "CAKE_PRODUCT_SIZE_1"
-                || "CAKE_PRODUCT_SIZE_2"
-                || "CAKE_PRODUCT_SIZE_3":
+            case "CAKE_PRODUCT_SIZE_1":
+            case "CAKE_PRODUCT_SIZE_2":
+            case "CAKE_PRODUCT_SIZE_3":
                 response = [
                     Response.genQuickReply(scripts.menu.cake_amount, [{
                         title: scripts.menu.cake_amounts[0],
@@ -65,9 +65,9 @@ class Products {
                 break;
 
             // Respond with what amount you want for doughnuts
-            case "BUY_CHOCOLATE_FROSTED_DOUGHNUT_PRODUCT_PAYLOAD"
-                || "BUY_STRAWBERRY_FROSTED_DOUGHNUT_PRODUCT_PAYLOAD"
-                || "BUY_JELLY_DOUGHNUT_PRODUCT_PAYLOAD":
+            case "BUY_CHOCOLATE_FROSTED_DOUGHNUT_PRODUCT_PAYLOAD":
+            case "BUY_STRAWBERRY_FROSTED_DOUGHNUT_PRODUCT_PAYLOAD":
+            case "BUY_JELLY_DOUGHNUT_PRODUCT_PAYLOAD":
                 response = [
                     Response.genQuickReply(scripts.menu.doughnut_amount, [{
                         title: scripts.menu.doughnut_amounts[0],
