@@ -17,6 +17,10 @@ class Receive {
         try {
             if (event.message) {
                 let message = event.message;
+
+                if (message.quick_reply) {
+                    responses = this.handleQuickReply();
+                }
                 if (message.text) {
                     responses = this.handleTextMessage()
                 }
@@ -43,6 +47,14 @@ class Receive {
         } else {
             this.sendMessage(responses);
         }
+    }
+
+    // Handles mesage events with quick replies
+    handleQuickReply() {
+        // Get the payload of the quick reply
+        let payload = this.webhookEvent.message.quick_reply.payload;
+
+        return this.handlePayload(payload);
     }
 
     handleTextMessage() {
