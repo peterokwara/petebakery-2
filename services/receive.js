@@ -51,6 +51,10 @@ class Receive {
             `${this.webhookEvent.message.text} for ${this.user.psid}`
         );
 
+        if (this.webhookEvent.message.text == "hello") {
+            Response.genNuxMessage(this.user)
+        }
+
         return Response.genText("hello");
     }
 
