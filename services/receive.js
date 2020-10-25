@@ -84,7 +84,7 @@ class Receive {
 
         if (payload === "GET_STARTED_PAYLOAD") {
             response = Response.genNuxMessage(this.user);
-        } else if (payload === "CAKE_PRODUCT_PAYLOAD") {
+        } else if (payload.split("_").includes("PRODUCT")) {
             let product = new Product(this.user, this.webhookEvent)
             response = product.handlePayLoad(payload)
         } else if (payload === "DOUGHNUT_PRODUCT_PAYLOAD") {
