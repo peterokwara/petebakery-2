@@ -74,7 +74,7 @@ class Receive {
         console.log("Received Payload:", `${payload} for ${this.user.psid}`);
 
         // Log CTA event in FBA
-        GraphAPi.callFBAEventsAPI(this.user.psid, payload);
+        GraphApi.callFBAEventsAPI(this.user.psid, payload);
 
         let response;
 
