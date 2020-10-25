@@ -92,9 +92,9 @@ class Products {
             case "CAKE_PRODUCT_AMOUNT_3":
                 const iotaPayment = new IotaPayment()
                 const account = iotaPayment.createAccount()
-                console.log(`account is ${account}`)
-                const paymentLink = iotaPayment.createPaymentLink(account,10,"hello there")
-                console.log(`pay pay link is ${paymentLink}`)
+                console.log(`account is ${JSON.stringify(account)}`)
+                const paymentLink = iotaPayment.createPaymentLink(account, 10, "hello there")
+                console.log(`pay pay link is ${JSON.stringify(paymentLink)}`)
                 response = [
                     Response.genWebUrlButton("well, hello there!", paymentLink)
                 ]
