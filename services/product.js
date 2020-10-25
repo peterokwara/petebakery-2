@@ -13,18 +13,20 @@ class Products {
 
         switch (payload) {
             case "CAKE_PRODUCT_PAYLOAD":
+                console.log("cake selected brouh")
                 response = [
                     Response.genGenericTemplate(scripts.products.cakes)
                 ]
                 break;
 
             case "DOUGHNUT_PRODUCT_PAYLOAD":
+                console.log("Doughnut selected brouh")
                 response = [
                     Response.genGenericTemplate(scripts.products.doughnut)
                 ]
                 break;
 
-        
+
             // case "PRODUCT_1_SIZE":
             //     response = []
             //     break;
@@ -44,6 +46,7 @@ class Products {
             default:
                 break;
         }
+        return response;
     }
 }
 
