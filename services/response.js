@@ -65,6 +65,17 @@ class Response {
 
         return [welcome, guide, curation];
     }
+
+    static genWebUrlButton(title, url) {
+        let response = {
+            type: "web_url",
+            title: title,
+            url: url,
+            messenger_extensions: true
+        };
+
+        return response;
+    }
 }
 
 module.exports = Response

@@ -46,10 +46,7 @@ class IotaPayment {
       console.log('Address:', address, 'Tail transaction hash:', bundle[0].hash);
     });
 
-    return {
-      address: paymentAddress,
-      magnetLink: magnetLink
-    }
+    return magnetLink;
   }
 
   createAccount() {

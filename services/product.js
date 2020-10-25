@@ -1,6 +1,7 @@
 
 const Response = require("./response")
 const scripts = require("../scripts/en_US.json")
+const IotaPayment = require("./payment")
 
 class Products {
     constructor(user, webhookEvent) {
@@ -81,6 +82,22 @@ class Products {
                     }])
                 ]
                 break;
+
+            // Respond with payment url
+            case "DOUGHNUT_PRODUCT_AMOUNT_1":
+            case "DOUGHNUT_PRODUCT_AMOUNT_2":
+            case "DOUGHNUT_PRODUCT_AMOUNT_3":
+            case "CAKE_PRODUCT_AMOUNT_1":
+            case "CAKE_PRODUCT_AMOUNT_2":
+            case "CAKE_PRODUCT_AMOUNT_3":
+                const iotaPayment = new IotaPayment()
+                iotaPayment.createAccount()
+                const paymentLink = iotaPayment.createPaymentLink()
+                response = [
+                    Response.genWebUrlButton("well, hello there!", paymentLink)
+                ]
+                break;
+
             default:
                 break;
         }
