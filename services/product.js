@@ -29,7 +29,9 @@ class Products {
                 break;
 
             // Respond with what size do you want for cakes
-            case "BUY_WHITE_FOREST_CAKE_PRODUCT_PAYLOAD":
+            case "BUY_WHITE_FOREST_CAKE_PRODUCT_PAYLOAD"
+                || "BUY_BLACK_FOREST_CAKE_PRODUCT_PAYLOAD"
+                || "BUY_RED_VELVET_CAKE_PRODUCT_PAYLOAD":
                 response = [
                     Response.genQuickReply(scripts.menu.size, [{
                         title: scripts.menu.cake_sizes[0],
@@ -41,18 +43,6 @@ class Products {
                         title: scripts.menu.cake_sizes[2],
                         payload: scripts.menu.cake_sizes_payload[2]
                     }])
-                ]
-                break;
-
-            case "BUY_BLACK_FOREST_CAKE_PRODUCT_PAYLOAD":
-                response = [
-                    Response.genQuickReply(scripts.menu.size, scripts.menu.size)
-                ]
-                break;
-
-            case "BUY_RED_VELVET_CAKE_PRODUCT_PAYLOAD":
-                response = [
-                    Response.genQuickReply(scripts.menu.size, scripts.menu.size)
                 ]
                 break;
 
